@@ -1,0 +1,56 @@
+@use '../../variables/variables' as v;
+.ButtonChoice {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	width: 47.5rem;
+	height: 60vh;
+	margin: 0 auto;
+	// background-color: pink;
+
+	&__top,
+	&__bot {
+		.ButtonChoice__choice {
+			// background-color: red;
+			// width: 100vw;
+			img {
+				background-color: white;
+			}
+		}
+	}
+
+	&__top {
+		margin-bottom: 2rem;
+	}
+
+	&__choice {
+		height: 12.5rem;
+		width: 12.5rem;
+		// background-color: white;
+		border-radius: 50vw;
+
+		&.blue,
+		&.yellow,
+		&.red {
+			img {
+				width: 75%;
+				height: 75%;
+				object-fit: contain;
+				border-radius: 50vw;
+				padding: 2.2rem;
+			}
+		}
+
+		&.blue {
+			background: linear-gradient(v.$borderBlue);
+			margin-right: 3rem;
+		}
+		&.yellow {
+			background: linear-gradient(v.$borderYellow);
+		}
+		&.red {
+			background: linear-gradient(v.$borderRed);
+		}
+	}
+}
