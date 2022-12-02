@@ -5,6 +5,8 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 1.5rem;
+	padding-right: 1rem;
+
 	// padding-left: 1.5rem;
 
 	&__logo {
@@ -20,6 +22,7 @@
 	&__score {
 		background-color: #fff;
 		width: 10rem;
+		height: 120px;
 		border-radius: 5px;
 		display: flex;
 		flex-direction: column;
