@@ -10,7 +10,7 @@ const SingleButton = ({ choice, userChoice, houseChoice }) => {
 	const [buttonColor, setButtonColor] = useState('');
 
 	// console.log(userChoice);
-	console.log(choice);
+	// console.log(choice);
 
 	useEffect(() => {
 		// setSelected(choice);

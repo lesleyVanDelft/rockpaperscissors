@@ -4,7 +4,7 @@ import iconPaper from '../../assets/images/icon-paper.svg';
 import iconScissors from '../../assets/images/icon-scissors.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import SingleButton from '../PickButton/SingleButton';
-import { gameStatus } from '../../features/Choice/choiceSlice';
+import { gameStatus, setHouse } from '../../features/Choice/choiceSlice';
 
 const HouseChoice = ({}) => {
 	const userChoice = useSelector(state => state.choice.choice);
@@ -34,6 +34,10 @@ const HouseChoice = ({}) => {
 	useEffect(() => {
 		setHousePick(options[Math.floor((options.length * Math.random()) | 0)]);
 	}, []);
+
+	useEffect(() => {
+		dispatch(setHouse(housePick));
+	}, [housePick]);
 
 	useEffect(() => {
 		setUserPick(userChoice);

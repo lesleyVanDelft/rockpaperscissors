@@ -3,7 +3,11 @@ import iconPaper from '../../assets/images/icon-paper.svg';
 import iconScissors from '../../assets/images/icon-scissors.svg';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { chooseOption, selected } from '../../features/Choice/choiceSlice';
+import {
+	chooseOption,
+	selected,
+	setUser,
+} from '../../features/Choice/choiceSlice';
 
 const Button = ({ selectedColor }) => {
 	const images = [iconPaper, iconScissors, iconRock];
@@ -27,6 +31,7 @@ const Button = ({ selectedColor }) => {
 								onClick={() => {
 									setColor('blue');
 									dispatch(chooseOption('blue'));
+									dispatch(setUser('paper'));
 								}}>
 								<img src={el} alt="dsfsd" />
 							</button>
@@ -39,6 +44,7 @@ const Button = ({ selectedColor }) => {
 								onClick={() => {
 									setColor('yellow');
 									// dispatch(chooseOption(color));
+									dispatch(setUser('scissors'));
 								}}>
 								<img src={el} alt="dsfsd" />
 							</button>
@@ -50,6 +56,7 @@ const Button = ({ selectedColor }) => {
 								className={`ButtonChoice__choice red`}
 								onClick={() => {
 									setColor('red');
+									dispatch(setUser('rock'));
 									// dispatch(chooseOption(color));
 								}}>
 								<img src={el} alt="dsfsd" />
