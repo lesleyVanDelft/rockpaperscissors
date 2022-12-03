@@ -2,9 +2,9 @@
 .ButtonChoice {
 	display: flex;
 	align-items: center;
-	flex-direction: column;
+	// flex-direction: column;
 	justify-content: center;
-	width: 47.5rem;
+	width: 35.5rem;
 	height: 60vh;
 	margin: 0 auto;
 	// position: relative;
@@ -48,8 +48,9 @@
 
 		&.blue {
 			background: linear-gradient(v.$borderBlue);
-			margin-right: 3rem;
+			margin-right: 5rem;
 			position: relative;
+			margin-bottom: 1rem;
 			// &::after {
 			// 	content: '';
 			// 	position: absolute;
@@ -66,6 +67,7 @@
 		}
 		&.red {
 			background: linear-gradient(v.$borderRed);
+			// justify-self: flex-end;
 		}
 	}
 }
