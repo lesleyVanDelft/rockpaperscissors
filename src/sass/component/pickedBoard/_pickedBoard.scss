@@ -1,0 +1,51 @@
+@use '../../variables/variables' as v;
+
+.PickedBoard {
+	// background-color: pink;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	h2 {
+		// margin-bottom: 2rem;
+	}
+
+	.SingleButton {
+		height: 12.5rem;
+		width: 12.5rem;
+		border-radius: 50vw;
+		img {
+			width: 75%;
+			height: 75%;
+			object-fit: contain;
+			border-radius: 50vw;
+			padding: 2.2rem;
+			z-index: 50;
+			background-color: white;
+		}
+
+		&.blue {
+			background: linear-gradient(v.$borderBlue);
+		}
+		&.yellow {
+			background: linear-gradient(v.$borderYellow);
+		}
+		&.red {
+			background: linear-gradient(v.$borderRed);
+		}
+	}
+
+	p {
+		color: white;
+	}
+
+	&__houseChoice {
+		// background-color: red;
+		&.countdown {
+			height: 12.5rem;
+			width: 12.5rem;
+			border-radius: 50vw;
+			background-color: rgba(0, 0, 0, 0.12);
+		}
+		// background-blend-mode: darken;
+	}
+}

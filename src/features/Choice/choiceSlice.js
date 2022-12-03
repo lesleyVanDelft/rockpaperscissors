@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
 	choice: '',
 	selected: false,
+	completed: false,
 };
 
 export const choiceSlice = createSlice({
@@ -15,9 +16,18 @@ export const choiceSlice = createSlice({
 		selected: (state, action) => {
 			state.selected = action.payload;
 		},
+		gameStatus: state => {
+			state.completed = true;
+		},
+		resetGame: state => {
+			state.choice = '';
+			state.selected = false;
+			state.completed = false;
+		},
 	},
 });
 
-export const { chooseOption, selected } = choiceSlice.actions;
+export const { chooseOption, selected, gameStatus, resetGame } =
+	choiceSlice.actions;
 
 export default choiceSlice.reducer;

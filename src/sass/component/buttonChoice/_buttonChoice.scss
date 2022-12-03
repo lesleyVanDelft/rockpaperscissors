@@ -2,21 +2,15 @@
 .ButtonChoice {
 	display: flex;
 	align-items: center;
-	// flex-direction: column;
 	justify-content: center;
 	width: 35.5rem;
 	height: 60vh;
 	margin: 0 auto;
-	// position: relative;
-	// background: url('../assets/images/bg-triangle.svg') no-repeat center center /
-	// 	cover;
 	&__top,
 	&__bot {
 		position: relative;
 		z-index: 50;
 		.ButtonChoice__choice {
-			// background-color: red;
-			// width: 100vw;
 			img {
 				background-color: white;
 			}
@@ -30,7 +24,6 @@
 	&__choice {
 		height: 12.5rem;
 		width: 12.5rem;
-		// background-color: white;
 		border-radius: 50vw;
 
 		&.blue,
@@ -51,23 +44,12 @@
 			margin-right: 5rem;
 			position: relative;
 			margin-bottom: 1rem;
-			// &::after {
-			// 	content: '';
-			// 	position: absolute;
-			// 	right: 50px;
-			// 	top: 0;
-			// 	width: 150px;
-			// 	height: 25px;
-			// 	background: url('../assets/images/bg-triangle.svg') no-repeat center
-			// 		center / cover;
-			// }
 		}
 		&.yellow {
 			background: linear-gradient(v.$borderYellow);
 		}
 		&.red {
 			background: linear-gradient(v.$borderRed);
-			// justify-self: flex-end;
 		}
 	}
 }
