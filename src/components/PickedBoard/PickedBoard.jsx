@@ -61,47 +61,6 @@ const PickedBoard = () => {
 		dispatch(setResult(gameResult));
 	}, [gameResult]);
 
-	// useEffect(() => {
-	// 	setColor(selected);
-
-	// 	if (color === 'blue') {
-	// 		setChoice('paper');
-	// 	} else if (color === 'yellow') {
-	// 		setChoice('scissors');
-	// 	} else if (color === 'red') {
-	// 		setChoice('rock');
-	// 	}
-	// }, [selected]);
-	// console.log(choice);
-	// const getWinner = () => {};
-
-	// useEffect(() => {
-	// 	if (choice === houseChoice) {
-	// 		setGameResult('tie');
-	// 		dispatch(setResult(gameResult));
-	// 	} else if (choice === 'rock' && houseChoice === 'paper') {
-	// 		setGameResult('lose');
-	// 		dispatch(setResult(gameResult));
-	// 	} else if (choice === 'rock' && houseChoice === 'scissors') {
-	// 		setGameResult('win');
-	// 		dispatch(setResult(gameResult));
-	// 	} else if (choice === 'paper' && houseChoice === 'rock') {
-	// 		setGameResult('win');
-	// 		dispatch(setResult(gameResult));
-	// 	} else if (choice === 'paper' && houseChoice === 'scissors') {
-	// 		setGameResult('lose');
-	// 		dispatch(setResult(gameResult));
-	// 	} else if (choice === 'scissors' && houseChoice === 'paper') {
-	// 		setGameResult('win');
-	// 		dispatch(setResult(gameResult));
-	// 	} else if (choice === 'scissors' && houseChoice === 'rock') {
-	// 		setGameResult('lose');
-	// 		dispatch(setResult(gameResult));
-	// 	}
-	// 	console.log(choice);
-	// 	console.log(houseChoice);
-	// }, []);
-
 	return (
 		<div className="PickedBoard">
 			<div className="PickedBoard__choices">
@@ -113,7 +72,11 @@ const PickedBoard = () => {
 					className={`PickedBoard__choices--reset ${
 						gameStatus ? 'show' : 'hidden'
 					}`}>
-					<h3>You {`win?`}</h3>
+					{gameResult === 'win' || gameResult === 'lose' ? (
+						<h3>You {gameResult}!</h3>
+					) : (
+						<h3>It's a {gameResult}</h3>
+					)}
 					<button onClick={() => dispatch(resetGame())}>Play again</button>
 				</div>
 
